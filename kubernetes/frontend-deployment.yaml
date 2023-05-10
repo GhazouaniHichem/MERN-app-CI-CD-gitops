@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: moviesfrontend
-          image: ghazouanihm/movies-front:replaceImageTag
+          image: ghazouanihm/movies-front:1
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
