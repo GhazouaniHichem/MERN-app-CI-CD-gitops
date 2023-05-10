@@ -41,7 +41,7 @@ pipeline {
                         sed -i "s/movies-server=.*/movies-server:${IMAGE_TAG}/g" kubernetes/server-deployment.yaml
                         git add .
                         git commit -m "Update deployment image to version ${IMAGE_TAG}"
-                        git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
+                        git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} main
                     '''
                 }
             }
