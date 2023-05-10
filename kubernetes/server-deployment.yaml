@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: moviesserver
-        image: ghazouanihm/movies-mern-app-backend:35
+        image: ghazouanihm/movies-mern-app-backend:36
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

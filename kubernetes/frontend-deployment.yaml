@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: moviesfrontend
-          image: ghazouanihm/movies-mern-app-frontend:35
+          image: ghazouanihm/movies-mern-app-frontend:36
           imagePullPolicy: Always
           ports:
             - containerPort: 80
