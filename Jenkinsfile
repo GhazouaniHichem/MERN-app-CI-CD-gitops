@@ -37,8 +37,8 @@ pipeline {
                         git config user.email "ghazouanih68@gmail.com"
                         git config user.name "Ghazouani Hichem"
                         BUILD_NUMBER=${BUILD_NUMBER}
-                        sed -i "s/movies-front:1/movies-mern-app-frontend:${IMAGE_TAG}/g" kubernetes/frontend-deployment.yaml
-                        sed -i "s/movies-server:1/movies-mern-app-backend:${IMAGE_TAG}/g" kubernetes/server-deployment.yaml
+                        sed -i "s/movies-mern-app-frontend.*/movies-mern-app-frontend:${IMAGE_TAG}/g" kubernetes/frontend-deployment.yaml
+                        sed -i "s/movies-mern-app-backend.*/movies-mern-app-backend:${IMAGE_TAG}/g" kubernetes/server-deployment.yaml
                         git add .
                         git commit -m "Update deployment image to version ${IMAGE_TAG}"
                         git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} main
