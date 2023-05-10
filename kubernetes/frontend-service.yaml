@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app: moviesfrontend
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 80
